@@ -61,17 +61,20 @@
                 destination: destination,	
                 details: details	
             };	
-        analytics.identify('2222-device', {	
-            email: email,	
-            name: fullname,	
-            accountStatus: 'TEST_INLINE'	
-        });	
-        analytics.track('destination submitted', user, function () {	
-            window.location.href = "";	
-        });	
-        analytics.track('new track call', user, function () {	
-            window.location.href = "";	
-        });	
+            $("form").submit(function() {
+                alert('sucess')
+            })
+            analytics.identify('2222-device', {	
+                email: email,	
+                name: fullname,	
+                accountStatus: 'TEST_INLINE'	
+            });	
+            analytics.track('destination submitted', user, function () {	
+                window.location.href = "";	
+            });	
+            analytics.track('new track call', user, function () {	
+                window.location.href = "";	
+            });	
        }	
     </script>
 </body>
